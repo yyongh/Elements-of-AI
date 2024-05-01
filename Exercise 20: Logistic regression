@@ -1,0 +1,24 @@
+## BUILDING AI - NEURAL-NETWORKS - LOGISTIC REGRESSION
+## Exercise 20: Logistic regression
+## Advanced
+
+import math
+import numpy as np
+
+x = np.array([4, 3, 0])
+c1 = np.array([-.5, .1, .08])
+c2 = np.array([-.2, .2, .31])
+c3 = np.array([.5, -.1, 2.53])
+
+def sigmoid(z):
+    # add your implementation of the sigmoid function here
+    print(1 / (1 + math.exp(-z)))
+
+def predict(X, c):
+    price = X[0]*c[0] + X[1]*c[1] + X[2]*c[2]
+    return(price)
+
+# calculate the output of the sigmoid for x with all three coefficients
+sigmoid(predict(x, c1))
+sigmoid(predict(x, c2))
+sigmoid(predict(x, c3))
