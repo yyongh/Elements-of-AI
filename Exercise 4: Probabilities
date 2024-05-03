@@ -1,0 +1,37 @@
+## BUILDING AI - GETTING STARTED WITH AI - HILL CLIMBING
+## Exercise 4: Probabilities
+## Intermediate
+import random
+
+def main():
+    prob = 0.80
+    if random.random() < prob:
+        print('dog')
+    else:
+        print('cat')
+
+main()
+
+# Advanced
+import random
+
+def main():
+    if random.random() < 0.20:
+        if random.random() < 0.5:
+            favourite = "cats"
+        else:
+            favourite = "bats"  # change this
+    else:
+        favourite = "dogs"  # change this
+
+    # More elegant solution
+    # if x < 0.8:
+    #     favourite = "dogs"
+    # elif x < 0.9:
+    #     favourite = "cats"
+    # else:
+    #     favourite = "bats"
+    
+    print("I love " + favourite) 
+
+main()
