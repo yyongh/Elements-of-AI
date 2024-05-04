@@ -1,0 +1,49 @@
+## BUILDING AI - DEALING WITH UNCERTAINTY - PROBABILITY FUNDAMENTALS
+## Exercise 8: Fishing in the Nordics
+## Intermediate
+def main():
+    countries = ['Denmark', 'Finland', 'Iceland', 'Norway', 'Sweden']
+    populations = [5615000, 5439000, 324000, 5080000, 9609000]
+    fishers = [1891, 2652, 3800, 11611, 1757]
+
+    total_fishers = sum(fishers)
+    total_population = sum(populations)
+
+    # write your solution here
+    probabilities = [fishers[0]/total_fishers, fishers[1]/total_fishers, fishers[2]/total_fishers, fishers[3]/total_fishers, fishers[4]/total_fishers]
+
+    for country, probability in zip(countries, probabilities):
+        print("%s %.2f%%" % (country, probability*100)) # modify this to print correct results
+
+main()
+
+
+## Advanced
+countries = ['Denmark', 'Finland', 'Iceland', 'Norway', 'Sweden']
+populations = [5615000, 5439000, 324000, 5080000, 9609000]
+male_fishers = [1822, 2575, 3400, 11291, 1731]
+female_fishers = [69, 77, 400, 320, 26] 
+
+def guess(winner_gender):
+    if winner_gender == 'female':
+        fishers = female_fishers
+    else:
+        fishers = male_fishers
+
+    # write your solution here
+    total_fishers = sum(fishers)
+    total_population = sum(populations)
+
+    probabilities = [fishers[0]/total_fishers, fishers[1]/total_fishers, fishers[2]/total_fishers, fishers[3]/total_fishers, fishers[4]/total_fishers]
+
+    guess = countries[probabilities.index(max(probabilities))]
+    biggest = max(probabilities)*100
+    return (guess, biggest)  
+
+def main():
+    country, fraction = guess("male")
+    print("if the winner is male, my guess is he's from %s; probability %.2f%%" % (country, fraction))
+    country, fraction = guess("female")
+    print("if the winner is female, my guess is she's from %s; probability %.2f%%" % (country, fraction))
+
+main()
