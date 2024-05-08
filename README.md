@@ -8,7 +8,6 @@ Meal Prep Assistant
 
 ## Summary
 
-Describe briefly in 2-3 sentences what your project is about. About 250 characters is a nice length! 
 The Meal Prep Assistant helps users plan low-calorie, high-protein meals for the week (or more) ahead. Choose dishes, get a shopping list and ingredient prep list. Cook and freeze ahead of time, or prep ahead to reduce cooking time on busy days in the week.
 
 ## Background
