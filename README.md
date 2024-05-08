@@ -4,76 +4,52 @@ Copy the template, paste it to your GitHub README and edit! -->
 
 # Project Title
 
-Final project for the Building AI course
+Meal Prep Assistant
 
 ## Summary
 
 Describe briefly in 2-3 sentences what your project is about. About 250 characters is a nice length! 
-
+The Meal Prep Assistant helps users plan low-calorie, high-protein meals for the week (or more) ahead. Choose dishes, get a shopping list and ingredient prep list. Cook and freeze ahead of time, or prep ahead to reduce cooking time on busy days in the week.
 
 ## Background
 
-Which problems does your idea solve? How common or frequent is this problem? What is your personal motivation? Why is this topic important or interesting?
+As someone who can't cook and yet needs proper nutrition to meet my fitness goals, planning macros, choosing dishes, buying groceries, prepping ingredients, and cooking are all hurdles to overcome. Having something to do all the calculating, planning, and thinking for me, so I only had to follow instructions, would lower the barrier of entry to nutrition and cooking. It combines a nutritionist/dietician and personal (grocery) shopper in one.
 
-This is how you make a list, if you need one:
-* problem 1
-* problem 2
-* etc.
-
+The Meal Prep Assistant helps:
+* People new to dieting - Meal Prep Assistant calculates macros and suggests recipes
+* Save money - Buy only what you need at the grocery store
+* Save time - Prep ingredients or meals in bulk
 
 ## How is it used?
 
-Describe the process of using the solution. In what kind situations is the solution needed (environment, time, etc.)? Who are the users, what kinds of needs should be taken into account?
-
-Images will make your README look nice!
-Once you upload an image to your repository, you can link link to it like this (replace the URL with file path, if you've uploaded an image to Github.)
-![Cat](https://upload.wikimedia.org/wikipedia/commons/5/5e/Sleeping_cat_on_her_back.jpg)
-
-If you need to resize images, you have to use an HTML tag, like this:
-<img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Sleeping_cat_on_her_back.jpg" width="300">
-
-This is how you create code examples:
-```
-def main():
-   countries = ['Denmark', 'Finland', 'Iceland', 'Norway', 'Sweden']
-   pop = [5615000, 5439000, 324000, 5080000, 9609000]   # not actually needed in this exercise...
-   fishers = [1891, 2652, 3800, 11611, 1757]
-
-   totPop = sum(pop)
-   totFish = sum(fishers)
-
-   # write your solution here
-
-   for i in range(len(countries)):
-      print("%s %.2f%%" % (countries[i], 100.0))    # current just prints 100%
-
-main()
-```
-
+1. User enters profile information (height, weight, bodyfat % (if known), activity level, goals, dietry requirements, etc.) of people eating the meals
+2. User selects dishes for meals in the week (or any time period), e.g. only dinners on Monday to Friday
+	- Meal Prep Assistant suggests dishes, e.g. after selecting Breakfast and Lunch, suggests a Dinner that fits macros
+	- Meal Prep Assistant gives suggestions on how to adjust ingredient quantities to hit macros, if dishes selected are over or under
+3. Meal Prep Assistant then compiles a list of:
+	- Groceries (veg, meat, others) e.g. 6 potatoes, 500g chicken breast, etc.
+	- Prep list (veg, meat) e.g. 3 potatoes diced, 3 potatoes sliced into wedges, etc.
+	- Assembly (dishes) - which prepped ingredients go into which dish
+	- Cooking instructions (dishes)
+	- Portion instructions (dishes) - for >1 people
+4. User rates recipes so Meal Prep Assistant can learn preferences and make suggestions based on more than just macro suitability
 
 ## Data sources and AI methods
-Where does your data come from? Do you collect it yourself or do you use data collected by someone else?
-If you need to use links, here's an example:
-[Twitter API](https://developer.twitter.com/en/docs)
 
-| Syntax      | Description |
-| ----------- | ----------- |
-| Header      | Title       |
-| Paragraph   | Text        |
+Recipe lists can come from:
+* [The Felu Cookbook](https://payhip.com/b/7ubMY)
+* [The Recipe E-Book By Dave Fell Fitness](https://www.fellfitnesscommunitystore.com/products/the-recipe-e-book-by-dave-fell-fitness)
 
 ## Challenges
 
-What does your project _not_ solve? Which limitations and ethical considerations should be taken into account when deploying a solution like this?
+Meal Prep Assistant cannot shop for and prep the meals for you - a ready-to-eat meal service would be better for that. It is for people who are willing to put in some time and effort and/or save some money. Nutritional information of recipes may not be 100% accurate, as ingredients sourced by users may differ from that used in the recipes. Recommended macros will also not be 100% accurate, as each individual's needs can only be _estimated_ based on parameters (e.g. height, weight, bodyfat %).
 
 ## What next?
 
-How could your project grow and become something even more? What kind of skills, what kind of assistance would you  need to move on? 
-
+I imagine a mobile application would be most accessible. However, I do not have the coding and app development skills required to construct such a recipe database, and a program that learns user preferences.
 
 ## Acknowledgments
 
-* list here the sources of inspiration 
-* do not use code, images, data etc. from others without permission
-* when you have permission to use other people's materials, always mention the original creator and the open source / Creative Commons licence they've used
-  <br>For example: [Sleeping Cat on Her Back by Umberto Salvagnin](https://commons.wikimedia.org/wiki/File:Sleeping_cat_on_her_back.jpg#filelinks) / [CC BY 2.0](https://creativecommons.org/licenses/by/2.0)
-* etc
+* Raffaele Colonna aka Felu for [The Felu Cookbook](https://www.felu.co/)
+* Dave Fell for [The Recipe E-Book By Dave Fell Fitness](https://www.fellfitnesscommunitystore.com/products/the-recipe-e-book-by-dave-fell-fitness)
+* nao [nao_stock.recipe](https://www.instagram.com/nao_stock.recipe/) for the shopping and prep list idea
